@@ -4,6 +4,7 @@ package com.itheima.demo01;
     代码块:被{ }包裹的一块代码
  */
 public class Demo01 {
+
     public static void main(String[] args) {
         /*
             1.局部代码块:写在方法中的代码块
