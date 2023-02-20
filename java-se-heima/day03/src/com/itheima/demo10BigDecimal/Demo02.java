@@ -3,8 +3,9 @@ package com.itheima.demo10BigDecimal;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-/*
-    使用BigDecimal实现小数的+,-,*,/,%的精确计算
+
+/**
+ * 使用BigDecimal实现小数的+,-,*,/,%的精确计算
  */
 public class Demo02 {
     public static void main(String[] args) {

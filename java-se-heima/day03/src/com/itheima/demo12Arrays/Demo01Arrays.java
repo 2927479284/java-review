@@ -19,6 +19,7 @@ public class Demo01Arrays {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
+        System.out.println(arr);
         //static String toString(Object[] a)返回指定数组内容的字符串表示形式。
         String s = Arrays.toString(arr);
         System.out.println(s);//[3, 1, 2, 5, 4]

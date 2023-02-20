@@ -1,5 +1,8 @@
 package com.itheima.demo09Test;
 
+/**
+ * 收银员
+ */
 public class Cashier extends Worker{
     public Cashier() {
     }

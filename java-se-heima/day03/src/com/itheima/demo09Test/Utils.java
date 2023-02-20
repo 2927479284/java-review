@@ -4,10 +4,15 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * 工具类
+ */
 public class Utils {
-    /*
-        定义一个公共的静态方法
-            birthdayToAge(String birthday)可以通过一个字符串的生日计算出年龄。(每年按365天计算)
+    /** 定义一个公共的静态方法
+     * birthdayToAge(String birthday)可以通过一个字符串的生日计算出年龄。(每年按365天计算)
+     * @param birthday
+     * @return
+     * @throws ParseException
      */
     public static int birthdayToAge(String birthday) throws ParseException {
         //2.创建Date对象,获取当前日期

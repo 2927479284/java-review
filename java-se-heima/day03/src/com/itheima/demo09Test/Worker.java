@@ -7,6 +7,10 @@ import java.text.ParseException;
              (注：出生日期需要从控制台接收。且用户只能输入日期，不能输入年龄; 输出只能输出年龄，不能输出生日)
         方法：工作(work)
  */
+
+/**
+ * 工作类(员工超类)
+ */
 public abstract class Worker {
     //姓名(String)、
     private String name;
@@ -66,14 +70,11 @@ public abstract class Worker {
     public int getAge()  {
         //4.请在父类的getAge()方法中调用birthdayToAge()方法，用于计算此人的年龄。
         try {
-            age = Utils.birthdayToAge(birthday);
+            this.age = Utils.birthdayToAge(this.birthday);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return age;
+        return this.age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 }

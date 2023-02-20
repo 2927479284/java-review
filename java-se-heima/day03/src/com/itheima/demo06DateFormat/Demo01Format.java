@@ -1,5 +1,6 @@
 package com.itheima.demo06DateFormat;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -12,6 +13,7 @@ import java.util.Date;
  */
 public class Demo01Format {
     public static void main(String[] args) {
+
         //1.创建SimpleDateFormat对象,构造方法中传递指定的模式
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         //2.使用SimpleDateFormat对象中的方法format,把日期格式化为符合模式的字符串

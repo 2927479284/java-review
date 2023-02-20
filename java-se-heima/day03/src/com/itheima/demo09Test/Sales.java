@@ -1,5 +1,8 @@
 package com.itheima.demo09Test;
 
+/**
+ * 售货员
+ */
 public class Sales extends Worker {
     public Sales() {
     }

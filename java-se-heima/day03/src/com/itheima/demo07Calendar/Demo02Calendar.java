@@ -15,6 +15,8 @@ public class Demo02Calendar {
         //获取Calendar对象
         Calendar c = Calendar.getInstance();
         Date date = c.getTime();
+        int i = c.get(Calendar.YEAR);//年份
+        System.out.println();
         System.out.println(date);//Fri Mar 18 16:18:00 CST 2022
     }
 

@@ -2,11 +2,11 @@ package com.itheima.demo11System;
 
 import java.util.Date;
 
-/*
-    java.lang.System类
-        System:系统
-        类中提供的大量的静态方法,可以获取与系统相关的信息
-        System类不能被实例化,不能创建对象(私有的空参数构造方法)
+/**
+ *     java.lang.System类
+ *         System:系统
+ *         类中提供的大量的静态方法,可以获取与系统相关的信息
+ *         System类不能被实例化,不能创建对象(私有的空参数构造方法)
  */
 public class Demo01System {
     public static void main(String[] args) {
