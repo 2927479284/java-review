@@ -2,7 +2,7 @@ package com.itheima.demo04Objects;
 
 import java.util.Objects;
 
-public class Person {
+public class Person extends Object{
     private String name;
     private int age;
 

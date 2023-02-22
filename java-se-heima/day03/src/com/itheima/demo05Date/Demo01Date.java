@@ -13,6 +13,7 @@ public class Demo01Date {
                 CST(时区):中国标准时间(北京,上海)
          */
         Date d1 = new Date();
+        long time1 = d1.getTime();//获取时间戳
         //打印对象名不是地址值,说明Date类重写了Object类的toString
         System.out.println(d1);//Fri Mar 18 11:54:36 CST 2022  当前系统的时间和日期
 
