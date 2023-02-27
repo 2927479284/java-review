@@ -14,5 +14,7 @@ public class Demo01GetThreadName {
 
         //在main方法,可以主线程的名称
         System.out.println(Thread.currentThread().getName());
+        Thread thread = Thread.currentThread();// 获取当前线程 返回当前线程对象
+        thread.getName();//通过线程对象获取对应的线程名字
     }
 }
