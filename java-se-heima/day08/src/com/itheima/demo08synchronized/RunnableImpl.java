@@ -1,5 +1,7 @@
 package com.itheima.demo08synchronized;
 
+import java.util.Date;
+
 /*
     卖票案例:创建3个线程,卖同100张票
     出现了线程安全问题:卖出了重复的票和不存在的票
@@ -26,6 +28,9 @@ public class RunnableImpl implements Runnable {
     //线程任务:卖票==>票依次减少
     @Override
     public void run() {
+        long l = System.currentTimeMillis();
+        Date date = new Date(l);
+        System.out.println("线程名："+Thread.currentThread().getName()+" 开始执行时间:"+date);
         //增加一个死循环:让线程重复卖票
         while (true){
             //同步代码块
@@ -45,5 +50,6 @@ public class RunnableImpl implements Runnable {
                 }
             }
         }
+        System.out.println("线程名："+Thread.currentThread().getName()+" 结束执行时间:"+date);
     }
 }
