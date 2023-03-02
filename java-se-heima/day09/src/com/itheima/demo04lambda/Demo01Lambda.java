@@ -6,6 +6,7 @@ package com.itheima.demo04lambda;
 public class Demo01Lambda {
     public static void main(String[] args) {
         //使用匿名内部类的方式,实现多线程程序
+        new Thread(()->System.out.println("我被执行了")).start();
         new Thread(new Runnable() {
             @Override
             public void run() {
