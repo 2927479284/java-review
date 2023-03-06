@@ -27,7 +27,7 @@ public class TCPClient {
                 //socket.configureBlocking(false);
 
                 //2.使用SocketChannel对象中的方法connect,根据服务器的ip地址和端口号连接服务器(3次握手)
-                boolean b = socket.connect(new InetSocketAddress("localhost", 8888));
+                boolean b = socket.connect(new InetSocketAddress("localhost", 8080));
                 System.out.println(b);//true:连接服务器成功
                 System.out.println("客户端连接服务器成功,结束轮询...");
                 //3.释放资源
