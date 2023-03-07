@@ -3,6 +3,7 @@ package com.itheima.demo03OutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 /*
     字节输出流的基本使用(重点)
