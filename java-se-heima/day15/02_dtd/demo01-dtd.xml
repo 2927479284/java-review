@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    dtd约束文档的使用步骤
+    1.在每个dtd约束文档中都有一个以<!DOCTYPE开头的代码,复制到xml文档中
+       <!DOCTYPE beans SYSTEM "bean.dtd">
+       a.<!DOCTYPE:dtd约束文档的固定声明格式
+       b.beans:dtd约束文档,约束xml文档中的根元素必须叫beans
+       c.SYSTEM:系统,指的是dtd约束文档位置:来源于本地的操作系统上
+         PUBLIC:公共,指的是dtd约束文档位置:来源于互联网上
+       d."bean.dtd":dtd约束文档的路径
+         我们一般都把dtd约束文档和xml文档放在同一个文件夹下,使用相对路径
+    2.根据dtd约束文档的要求,写出根元素
+    3.在根元素中,根据提示写出其他的元素和属性(写<出现提示)
+        在元素中写<没有提示,说明不能写元素了,只能写文本
+-->
+<!DOCTYPE beans SYSTEM "bean.dtd">
+<beans>
+    <bean id="" className="">
+        <property name="" value="">
+            只能写字符串文本
+        </property>
+    </bean>
+    <bean id="" className="">
+        <property name="" value=""></property>
+        <property name="" value=""></property>
+        <property name="" value=""></property>
+        <property name="" value=""></property>
+    </bean>
+    <bean id="" className=""></bean>
+    <bean id="" className=""></bean>
+    <bean id="" className=""></bean>
+    <import resource="">文本</import>
+    <import resource="">文本</import>
+    <import resource="">文本</import>
+    <import resource="">文本</import>
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<书架 xmlns="http://www.itcast.cn"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.itcast.cn bookshelf.xsd"
+>
+    <书>
+        <书名>斗罗大陆</书名>
+        <作者>唐家三少</作者>
+        <售价>100</售价>
+    </书>
+    <书>
+        <书名>斗破苍穹</书名>
+        <作者>天蚕土豆</作者>
+        <售价>88.8</售价>
+    </书>
+</书架>

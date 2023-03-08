@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    schema约束文档的使用步骤:
+        1.在每个schema约束文档中,都有一个根元素的开始标签,复制到xml文档中,添加结束标签
+        2.在根元素中,根据提示写出前提的元素和属性(写<会出现提示)
+            在标签中写什么都报错,说明这个标签是一个自闭和标签,不能包含标签体
+-->
+<beans xmlns="http://www.itcast.cn/bean"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.itcast.cn/bean bean-schema.xsd"
+>
+    <bean id="" className="">
+        <property value=""/>
+        <property value=""/>
+        <property value="" name=""/>
+    </bean>
+    <bean id="" className=""></bean>
+    <import resource=""/>
+    <bean id="" className=""></bean>
+    <import resource=""/>
+    <import resource=""/>
+</beans>

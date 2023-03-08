@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean id="b001" className="com.itheima.demo01.Person">
+        <property name="jack"/>
+        <property age="18"/>
+    </bean>
+    <bean id="b002" className="com.itheima.demo01.Student">
+        <property name="rose"/>
+        <property age='18'/>
+    </bean>
+</beans>

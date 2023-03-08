@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    需求:把bean标签,包含所有的内容都以普通的文本显示出来
+        <bean id="b001" className="com.itheima.demo01.Person">
+            <property name="jack"/>
+            <property age="18"/>
+        </bean>
+    解决1:可以使用转义字符,把所有有特殊含义的字符替换
+    解决2:可以使用CDATA区域,在CDATA区域中写的任何内容,都会以文本的方式展示
+        格式:
+            <![CDATA[
+                任意内容,都是文本
+            ]]>
+       什么时候使用CDATA,大量使用转义字符的时候
+-->
+<beans>
+    &lt;bean id=&quot;b001&quot; className=&quot;com.itheima.demo01.Person&quot;&gt;
+    &lt;property name=&quot;jack&quot;/&gt;
+    &lt;property age=&quot;18&quot;/&gt;
+    &lt;/bean&gt;
+    <![CDATA[
+        <bean id="b001" className="com.itheima.demo01.Person">
+            <property name="jack"/>
+            <property age="18"/>
+        </bean>
+    ]]>
+    <bean id="b002" className="com.itheima.demo01.Student">
+        <property name="rose"/>
+        <property age='18'/>
+    </bean>
+</beans>

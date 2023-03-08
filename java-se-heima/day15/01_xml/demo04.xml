@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    注释:用来解释说明xml文档,给程序员看的,不会被xml解析器解析出来
+    添加|删除注释的快捷键:ctrl+shift+/
+-->
+<!--beans是xml文档的根元素,只能有一个-->
+<beans>
+    <!--
+        bean元素代表java中一个对象
+    -->
+    <bean id="b001" className="com.itheima.demo01.Person">
+        <!--
+            property元素代表对象中的一个属性(成员变量)
+        -->
+        <property name="jack"/>
+        <property age="18"/>
+    </bean>
+    <!--<bean id="b002" className="com.itheima.demo01.Student">
+        <property name="rose"/>
+        <property age='18'/>
+    </bean>-->
+</beans>

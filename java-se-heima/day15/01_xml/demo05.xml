@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <!--
+        需求:
+            在xml的标签中写出以下的算式
+            10<30 && 10>8
+        xml文档中的转义字符的作用:代替有特殊含义的字符
+            < &lt;
+            > &gt;
+            " &quot;
+            ' &apos;
+            & &amp;
+    -->
+    <bean>10&lt;30 &amp;&amp; 10&gt;8</bean>
+</beans>
