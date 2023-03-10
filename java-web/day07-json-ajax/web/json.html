@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // 1.描述用户对象（张三丰、男、32岁）
+    /*
+        User user = new User("张三丰","男",32);
+    */
+    let user ={"username":"张三丰","sex":"男","age":32};
+    console.log(user.username);
+    console.log(user.sex);
+    console.log(user.age);
+
+    // 2.描述用户数组（张三丰、张翠山、张无忌）
+    /*
+       List<User> list = new ArrayList();
+       list.add(new User("张三丰","男",32));
+       list.add(new User("张翠山","男",22));
+       list.add(new User("张无忌","男",12));
+    */
+    console.log("------------");
+    let list = [
+        {"username":"张三丰","sex":"男","age":32},
+        {"username":"张翠山","sex":"男","age":22},
+        {"username":"张无忌","sex":"男","age":12}
+    ]
+    // iter 出现增强for循环
+    for (let user of list) {
+        console.log(user.username);
+    }
+    console.log("------------");
+    // 3.描述韦小宝（27岁，老婆、师傅）
+    /*
+      Weixiaobao xiaobao = new Weixiaobao();
+      xiaobao.setAge(27);
+      xiaobao.setWife(list);
+      xiaobao.setTeacher(chenjinnan)
+    */
+    let xiaobao={
+        "age":27,
+        "wife":[
+            {"username":"建宁"},
+            {"username":"阿珂"},
+            {"username":"双儿"}
+        ],
+        "teacher":{"username":"陈近南","address":"台湾"}
+    }
+    console.log(xiaobao.age);
+    console.log(xiaobao.wife[1]);
+    console.log(xiaobao.teacher.username);
+
+</script>
+</body>
+</html>

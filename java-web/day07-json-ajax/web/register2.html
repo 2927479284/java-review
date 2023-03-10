@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>register2.html</title>
+    <!--引入axios工具类库-->
+    <script src="js/axios-0.20.0.js"></script>
+
+</head>
+<body>
+<h3>ajax的post方式</h3>
+<form action="">
+    用户名：<input type="text" name="username" id="username"> <span id="info"></span>
+</form>
+<script>
+    document.getElementById('username').onblur=function () {// 1.文本框绑定失去焦点事件
+        // 2.获取value属性值
+        let username = this.value;
+        // 3.axios工具类发送post请求
+        axios.post("/day07-json-ajax/RegisterServlet2",{username:username}).then(resp=>{
+            // 4. resp.data 服务器响应体结果
+            // 5.js实现页面数据刷新
+            if (resp.data == null) { // 可以注册
+                document.getElementById("info").innerHTML='<font color="green">可以注册</font>'
+            }else{// 已存在
+                document.getElementById("info").innerHTML='<font color="red">已存在，请更换一个</font>'
+            }
+        })
+    }
+</script>
+</body>
+</html>
