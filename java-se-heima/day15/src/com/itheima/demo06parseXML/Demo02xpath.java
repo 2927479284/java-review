@@ -48,7 +48,7 @@ public class Demo02xpath {
         //2.创建dom4j核心类SAXReader对象
         SAXReader sax = new SAXReader();
         //3.使用SAXReader对象中的方法read,读取xml文档到内存中,生成Document对象
-        Document document = sax.read("day15\\beans.xml");//路径就是io流相对路径
+        Document document = sax.read("C:\\Users\\Administrator.DESKTOP-31RFSET\\Desktop\\java-review\\java-se-heima\\day15\\beans.xml");//路径就是io流相对路径
         //4.使用Document对象中的方法selectNodes|selectSingleNode解析xml文档
         //获取xml文档中的所有元素
         List<Element> list01 = document.selectNodes("//*");

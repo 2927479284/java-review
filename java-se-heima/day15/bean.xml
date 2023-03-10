@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
     <bean id="001" className="cn.itcast.demo.User">
+        aaaaaaaaaaaaaaaaaaaaaaaaaa
         <property name="user" value="jack">文本1</property>
         <property name="user" value="rose">文本2</property>
     </bean>
     <bean id="002" className="cn.itcast.demo.Admin">
+        aaaaaaaaaaaaaaaaaaaaaaaaaa
         <property name="user" value="admin">文本3</property>
         <property name="user" value="write">文本4</property>
     </bean>

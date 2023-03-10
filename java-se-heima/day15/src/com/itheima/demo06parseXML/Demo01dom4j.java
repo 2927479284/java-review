@@ -1,11 +1,14 @@
 package com.itheima.demo06parseXML;
 
+import com.sun.deploy.util.StringUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /*
     使用dom4j解析xml文档
@@ -30,16 +33,18 @@ public class Demo01dom4j {
         //2.创建dom4j核心类SAXReader对象
         SAXReader sax = new SAXReader();
         //3.使用SAXReader对象中的方法read,读取xml文档到内存中,生成Document对象
-        Document document = sax.read("day15\\bean.xml");
+        Document document = sax.read("C:\\Users\\Administrator.DESKTOP-31RFSET\\Desktop\\java-review\\java-se-heima\\day15\\bean.xml");
         //4.使用Document对象中的方法getRootElement,获取根元素beans
         Element rootElement = document.getRootElement();
         System.out.println(rootElement.getName());
         //5.使用根元素Element对象中的方法elements,获取beans根元素下边所有的bean元素,存储到一个List集合中
-        List<Element> beanEleList = rootElement.elements();
+        List<Element> beanEleList =  rootElement.elements();
         //6.遍历List集合,获取每一个bean元素
         for (Element beanELe : beanEleList) {
             System.out.println("\t"+beanELe.getName());
             //7.使用bean元素Element中的方法attributeValue,根据属性名获取属性值(id,className)
+            String text1 = beanELe.getText();
+            System.out.println("当前："+beanELe.getName() + " 的文本值："+replaceBlank(text1));
             String id = beanELe.attributeValue("id");
             String className = beanELe.attributeValue("className");
             System.out.println("\t\tbean元素的属性id="+id);
@@ -59,5 +64,14 @@ public class Demo01dom4j {
                 System.out.println("\t\t\t\tproperty元素的文本:"+text);
             }
         }
+    }
+    public static String replaceBlank(String str) {
+        String dest = "";
+        if (str!=null) {
+            Pattern p = Pattern.compile("\\s*|\t|\r|\n");
+            Matcher m = p.matcher(str);
+            dest = m.replaceAll("");
+        }
+        return dest;
     }
 }
