@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue-2.6.12.js"></script>
+
+</head>
+<body>
+<div id="app">
+
+    <!--
+        {{插值表达式}}：展示vue管理的变量
+            缺点：网络波动，在等待期间直接显示插值表达式原文
+        v-text：相当于js中innerText（文本）
+        v-html：相当于js中innterHTML（超文本）
+    -->
+    插值表达式：{{message}} <br>
+    v-text：<span v-text="message"></span> <br>
+    v-html：<span v-html="message"></span> <br>
+
+</div>
+<script>
+    setTimeout(function () {
+        const app = new Vue({
+            el:'#app', // 管理视图
+            data:{ // 管理变量
+                message:'<b>黑马390，实现了高薪就业~~~</b>'
+            },
+            methods:{ // 管理方法
+
+            }
+        });
+    },2000)
+
+</script>
+</body>
+</html>

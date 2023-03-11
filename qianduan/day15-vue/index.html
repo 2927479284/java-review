@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <script src="js/vue-2.6.12.js"></script>
+</head>
+<body>
+
+<div id="box">
+  <input type="text" v-model="message">
+  <span>{{message}}</span>
+</div>
+<script>
+  let vue = new Vue({
+      el:"#box",
+      data:{
+          message:""
+      },
+      methods:{
+
+      }
+  })
+</script>
+</body>
+</html>

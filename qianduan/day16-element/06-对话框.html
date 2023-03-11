@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>对话框</title>
+    <script src="./js/vue.js"></script>
+    <script src="./element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="./element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<div id="app">
+    <el-button type="text" @click="dialogVisible = true">点击打开 Dialog</el-button>
+
+    <!--
+        el-dialog：对话框（模态框）
+             title="提示" 模态框标题
+             :visible.sync="dialogVisible"  模态框是否显示（true显示 | false隐藏）
+             :before-close="handleClose"  关闭模态框之前触发函数
+
+    -->
+    <el-dialog
+            title="提示"
+            :visible.sync="dialogVisible"
+            width="30%"
+            :before-close="handleClose">
+        <span>表单代码。。。</span>
+        <span slot="footer" class="dialog-footer">
+    <el-button @click="dialogVisible = false">取 消</el-button>
+    <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+  </span>
+    </el-dialog>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                dialogVisible: false
+            };
+        },
+        methods: {
+            handleClose(done) {
+                this.$confirm('确认关闭？')
+                    .then(_ => {
+                        done();
+                    })
+                    .catch(_ => {});
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>01-入门案例</title>
+
+    <!--1.引入vue的js类库-->
+    <script src="../js/vue-2.6.12.js"></script>
+</head>
+<body>
+<!--2.将视图交给vue管理-->
+<div id="app">
+    <h3>获取input中输入的文字</h3>
+    <input type="text" v-model="message">
+    <div style="border:red 1px solid; height: 25px;">{{message}}</div>
+</div>
+
+<!--3.将js脚本vue管理-->
+<script>
+    const app = new Vue({
+        el: '#app', // 管理视图，通过css选择器
+        data:{  // 管理js变量（模型）
+            message:''
+        },
+        methods:{ // 管理js方法（函数）
+
+        }
+    });
+</script>
+
+</body>
+</html>

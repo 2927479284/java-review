@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue-2.6.12.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <!--
+        for循环
+            1）简单： user in userList
+            2）完整：(user,index) in userList
+    -->
+    <ul>
+        <li v-for="(user,index) in userList">{{user.name}} -- {{index}}</li>
+    </ul>
+</div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            userList: [
+                {id: 1, name: 'jack', address: '北京顺义'},
+                {id: 2, name: 'lucy', address: '上海虹桥'},
+                {id: 3, name: 'jerry', address: '天津宝坻'}
+            ]
+        }
+    })
+</script>
+</body>
+</html>

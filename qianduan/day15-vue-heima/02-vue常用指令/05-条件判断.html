@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue-2.6.12.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--从文本框输入成绩, 然后判断成绩是否及格  >=80：优秀 、60>=：及格   <60：不及格-->
+    <h3>考试成绩练习</h3>
+    请输入成绩:<input type="text" v-model="score"><br>
+    你本次考试成绩:
+    <span v-if="score>=80">优秀</span>
+    <span v-else-if="score>=60">及格</span>
+    <span v-else>不及格</span>
+
+
+    <!--遍历users, 但是要求只显示性别为女的用户-->
+
+    <!--
+        v-if：如果满足条件显示，不满足不显示（页面不会渲染元素）
+        v-show：如果满足调节键显示，不满足不显示（页面会渲染元素）
+    -->
+    <h3>用户列表</h3>
+    <ul>
+        <li v-for="user in users" v-if="user.gender=='女'">{{user}}</li>
+    </ul>
+
+    <ul>
+        <li v-for="user in users" v-show="user.gender=='女'">{{user}}</li>
+    </ul>
+
+
+</div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            score: 15,
+            users: [
+                {name: 'jack', gender: '女'},
+                {name: 'lucy', gender: '女'},
+                {name: 'jerry', gender: '男'}
+            ]
+        }
+    })
+</script>
+</body>
+</html>

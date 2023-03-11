@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表单绑定</title>
+        <script src="../js/vue-2.6.12.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h3>姓名：</h3>
+
+            <input type="text" v-model="username">
+            <div>您写的姓名是:{{username}}</div>
+
+
+            <h3>性别：</h3>
+            <input type="radio" v-model="gender" value="男"> 男 <br>
+            <input type="radio" v-model="gender" value="女"> 女 <br>
+            <div>您选择的性别是:{{gender}}</div>
+
+
+            <h3>爱好：</h3>
+            <input type="checkbox" v-model="hobbies" value="抽烟">抽烟<br>
+            <input type="checkbox" v-model="hobbies" value="喝酒">喝酒<br>
+            <input type="checkbox" v-model="hobbies" value="烫头">烫头<br>
+            <div>您选择的爱好是:{{hobbies}}</div>
+
+
+            <h3>段位：</h3>
+            <select v-model="level">
+                <option value="">请选择</option>
+                <option value="青铜">青铜</option>
+                <option value="白银">白银</option>
+                <option value="王者">王者</option>
+            </select>
+            <div>您选择的段位是:{{level}}</div>
+        </div>
+    </body>
+
+    <script>
+        const vue = new Vue({
+            el:"#app",
+            data:{
+                username:"",
+                gender:"",
+                hobbies:[],
+                level:""
+            },
+            methods:{
+
+            }
+        });
+    </script>
+</html>

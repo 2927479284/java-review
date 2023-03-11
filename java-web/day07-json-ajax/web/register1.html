@@ -15,22 +15,16 @@
 </form>
 
 <script>
-    document.getElementById('username').onblur=function () { // 1.文本框绑定失去焦点事件
-        // 2.获取文本框value属性值
-        let username = this.value;
-        // alert(username)
-        // 3.通过axios工具发送异步请求
-        axios.get("/day07-json-ajax/RegisterServlet1?username="+username).then(resp=>{
-            // 4. 接收服务器返回响应体的结果  resp.data={"username":"jack","age":18}
-
-            // 5.根据返回结果判断，实现局部刷新
-            if(resp.data==null){ // 可以注册
-                document.getElementById('info').innerHTML='<font color="green">可以注册</font>';
-            }else{ // 不可以注册
-                document.getElementById('info').innerHTML='<font color="red">此用户名太受欢迎,请更换一个</font>';
+    //1.先获取输入框的内容，并且给他添加一个事件
+    document.getElementById("username").onblur = function (){
+        let value = this.value;
+        axios.get("/day07_java_web/RegisterServlet1?username="+value).then(resp=>{
+            if (resp.data == null){
+                document.getElementById("info").innerHTML = "该用户名可以注册";
+            }else {
+                document.getElementById("info").innerHTML = "该用户名已经被注册过";
             }
         })
-
     }
 </script>
 </body>

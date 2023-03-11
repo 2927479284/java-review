@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue-2.6.12.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <b>数量：</b>
+    <button @click="diff()">-</button>
+    <span>{{num}}</span>
+    <button v-on:click="num++">+</button>
+</div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {// 成员变量
+            num: 1
+        },
+        methods:{ // 定义方法
+            diff(){
+                console.log(this.num); // 输出成员变量
+                if (this.num > 1) {
+                    this.num--;
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

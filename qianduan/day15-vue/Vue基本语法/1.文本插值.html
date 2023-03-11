@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.文本插值.html</title>
+    <!-- 注意目录结构 -->
+    <script src="../js/vue-2.6.12.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h2 id="h2">{{message}}</h2>
+        v-text:<span id="text" v-text="message"></span> </br>
+        v-html:<span id="html" v-html="message"></span>
+    </div>
+</body>
+
+<script>
+    const app =  new Vue({
+        el:"#app",
+        data:{
+            message:"vue的插值语法"
+        },
+        methods:{
+
+        }
+    });
+</script>
+</html>

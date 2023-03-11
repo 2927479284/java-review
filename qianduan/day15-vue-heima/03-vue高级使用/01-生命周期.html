@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue-2.6.12.js"></script>
+</head>
+<body>
+<div id="app">
+
+</div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+
+        },
+        methods: {
+            find(){
+                alert('查询后台数据。。。')
+            }
+        },
+        // created是vue生命周期创建后触发的函数，与methods同级
+        created(){
+            // 类似于 window.onload
+           this.find();
+        }
+
+    })
+</script>
+</body>
+</html>

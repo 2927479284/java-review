@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue-2.6.12.js"></script>
+
+</head>
+<body>
+<div id="app">
+
+    <h3>属性绑定基本使用</h3>
+    改变图片的地址和大小<br>
+    图片地址:
+    <select v-model="imgSrc">
+        <option value="../img/vue.png">vue</option>
+        <option value="../img/lj.jpg">雷军</option>
+    </select>
+    图片宽度: <input type="text" v-model="imgWidth">
+    <br>
+    <img v-bind:src="imgSrc" :width="imgWidth">
+
+</div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            imgSrc: "../img/vue.png",
+            imgWidth: "100px"
+        },
+    })
+</script>
+</body>
+</html>

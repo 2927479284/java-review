@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>01-入门案例</title>
+
+</head>
+<body>
+    <h3>获取input中输入的文字</h3>
+    <input type="text" id="myInput">
+    <div style="border:red 1px solid; height: 25px;" id="myDiv"></div>
+    <script>
+        // 给input绑定键盘弹起事件
+        document.getElementById('myInput').onkeyup=function () {
+            // 获取input文本框的值
+            let val = this.value;
+            // 显示到div中
+            document.getElementById('myDiv').innerHTML=val;
+        }
+
+        setInterval()
+    </script>
+
+</body>
+</html>
